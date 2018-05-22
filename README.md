@@ -1,1 +1,1 @@
-# Template
+# Simple webpack 4 template with babel and eslint
