@@ -112,7 +112,7 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n/* index.js */\n\n(function Main() {\n\n    console.log('index.js running...');\n})();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\n/* index.js */\n\n(function Main() {\n\n    var indexjs = function indexjs() {\n        console.log('index.js working...');\n    };\n\n    indexjs();\n})();\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 

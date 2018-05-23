@@ -1,7 +1,11 @@
 /* index.js */
 
 (function Main() {
-    
-    console.log('index.js running...');
+       
+    const indexjs = () => {
+        console.log('index.js working...');
+    };
+
+    indexjs();
 
 })();
