@@ -26,7 +26,6 @@ module.exports = {
       chunkFilename: devMode ? '[id].css' : '[id].[contenthash].css',
     }),
     new HtmlWebpackPlugin({
-        favicon: '../favicon.ico',
         inject: true,
         hash: true,
         template: './src/index.html',
