@@ -15,18 +15,19 @@ module.exports = {
     },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js'
+    filename: devMode ? '[name].js' : '[name].[chunkhash].js',
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: devMode ? '[name].css' : '[name].[hash].css',
-      chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+      filename: devMode ? '[name].css' : '[name].[contenthash].css',
+      chunkFilename: devMode ? '[id].css' : '[id].[contenthash].css',
     }),
     new HtmlWebpackPlugin({
-        inject: false,
+        favicon: '../favicon.ico',
+        inject: true,
         hash: true,
         template: './src/index.html',
         filename: 'index.html'
