@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-    //devtool: 'source-map', // Enable to debug js code
+    devtool: false, //devtool: 'eval', // Enable to debug js code
     entry: { 
             app: [
                 './src/index.js',
