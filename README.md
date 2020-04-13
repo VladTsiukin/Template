@@ -7,5 +7,5 @@
 > - - npm install --save-dev
 > - - npm prune --save-dev
 > - - npm run watch
-> - - upgrade guide [a link](https://webpack.js.org/migrate/5/)
+> - - upgrade guide [https://webpack.js.org/migrate/5/](https://webpack.js.org/migrate/5/)
 > - (The npm 6.13.7 and node 13.9.0 was installed)
