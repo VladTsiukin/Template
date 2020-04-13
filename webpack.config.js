@@ -4,9 +4,19 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const devMode = process.env.NODE_ENV !== 'production';
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+    node: {
+        Buffer: false,
+        process: false
+      },
+    watch: true,
+    watchOptions: {
+        aggregateTimeout: 300,
+        poll: 1000,
+        ignored: /node_modules/
+      },
     devtool: false, //devtool: 'eval', // Enable to debug js code
     entry: { 
             app: [
@@ -19,7 +29,11 @@ module.exports = {
         filename: devMode ? '[name].js' : '[name].[chunkhash].js',
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']), // clean folder 'dist'
+        new CleanWebpackPlugin({
+            verbose: true//,
+            //cleanAfterEveryBuildPatterns: ['!index.html'],
+        }         
+    ),
         new MiniCssExtractPlugin({
         // Options similar to the same options in webpackOptions.output
         // both options are optional

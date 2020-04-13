@@ -3,9 +3,10 @@
 (function Main() {
        
     const indexjs = () => {
-        console.log('index.js working...');
+        let p = document.createElement('p');
+        p.innerText = 'index.js is working...';
+        document.body.appendChild(p);
     };
 
-    indexjs();
-
+    indexjs(); 
 })();
