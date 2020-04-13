@@ -1,4 +1,4 @@
-# Simple webpack 5 template with babel and eslint
+# Simple webpack 4 template with babel and eslint
 
 ### ***download***
 
@@ -7,5 +7,4 @@
 > - - npm install --save-dev
 > - - npm prune --save-dev
 > - - npm run watch
-> - - upgrade guide [https://webpack.js.org/migrate/5/](https://webpack.js.org/migrate/5/)
 > - (The npm 6.13.7 and node 13.9.0 was installed)
