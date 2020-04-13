@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+    mode: 'development',
     node: {
         Buffer: false,
         process: false
@@ -30,8 +31,8 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin({
-            verbose: true//,
-            //cleanAfterEveryBuildPatterns: ['!index.html'],
+            verbose: true,
+            cleanAfterEveryBuildPatterns: ['!index.html'],
         }         
     ),
         new MiniCssExtractPlugin({
